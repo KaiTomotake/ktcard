@@ -1,6 +1,18 @@
 [package]
 name = "ktcard"
-version = "0.1.0"
+version = "1.0.0"
+authors = ["Kai Tomotake"]
 edition = "2024"
+description = "An open-source, signed business card application exclusively for Kai Tomotake."
+license-file = "LICENSE"
+publish = false
+
+[profile.release]
+opt-level = 3
+lto = true
+panic = "abort"
+codegen-units = 1
 
 [dependencies]
+clap = "4.5.53"
+colored = "3.0.0"
